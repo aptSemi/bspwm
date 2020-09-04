@@ -120,7 +120,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = weather date
-modules-right = wireless-network networkspeeddown networkspeedup memory2 cpu2 pavolume discord arch-aur-updates variety 
+modules-right = wireless-network networkspeeddown networkspeedup memory2 cpu2 pavolume discord variety system-bluetooth-bluetoothctl arch-aur-updates
 
 tray-detached = false
 tray-offset-x = 0
@@ -461,7 +461,7 @@ type = internal/cpu
 interval = 1
 format-foreground = fb9fb1
 format-background = ${colors.background}
-format-prefix = " "
+;format-prefix = "  "
 format-prefix-foreground = #fdafbe
 ;format-underline = #cd1f3f
 
@@ -481,6 +481,7 @@ format-padding = 1
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
 label = Cpu %percentage:3%%
+;label = %percentage:3%%
 
 ################################################################################
 
@@ -560,7 +561,7 @@ label-empty-foreground = ${colors.foreground}
 label-empty-padding = 2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-
+ 
 
 ################################################################################
 
@@ -1168,6 +1169,8 @@ exec = ~/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh
 tail = true
 click-left = ~/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh --toggle &
 
-format-prefix = "  "
+;format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 format-prefix-background - ${colors.background}
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
