@@ -62,7 +62,7 @@ format-offset =
 background = #80000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #88cef4
+foreground = #f1c581
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -120,7 +120,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = weather date
-modules-right = wireless-network networkspeeddown networkspeedup memory2 cpu2 pavolume discord variety system-bluetooth-bluetoothctl arch-aur-updates
+modules-right = networkspeeddown networkspeedup memory2 cpu2 pavolume discord variety system-bluetooth-bluetoothctl arch-aur-updates wireless-network
 
 tray-detached = false
 tray-offset-x = 0
@@ -459,7 +459,7 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = fb9fb1
+format-foreground = #fb9fb1
 format-background = ${colors.background}
 ;format-prefix = "  "
 format-prefix-foreground = #fdafbe
@@ -480,7 +480,7 @@ format-padding = 1
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = Cpu %percentage:3%%
+label = cpu %percentage:3%%
 ;label = %percentage:3%%
 
 ################################################################################
@@ -499,7 +499,7 @@ time-alt = %H:%M
 format-prefix = " "
 format-prefix-foreground = #c1941a
 ;format-underline = #c1941a
-format-foreground = #6bcac0
+format-foreground = #f1c581
 format-background = ${colors.background}
 label = %date% %time%
 
@@ -511,7 +511,7 @@ type = custom/script
 exec = echo "  "
 interval = 1
 tail = true
-format-foreground = ${colors.foreground}
+format-foreground = #88cef4
 format-background = ${colors.background}
 format-prefix-foreground = #738adb
 ;format-underline = #738adb
@@ -705,7 +705,7 @@ interval = 1
 ;   %mb_total%
 label = %percentage_used%%
 
-format = Mem <label>
+format = mem <label>
 format-prefix = " "
 format-prefix-foreground = #3384d0
 ;format-underline = #3384d0
@@ -971,7 +971,7 @@ exec = echo ""
 ;exec = echo " "
 interval = 1
 tail = true
-format-foreground = ${colors.foreground}
+format-foreground = #e1a3ee
 format-background = ${colors.background}
 ;format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
@@ -1023,7 +1023,7 @@ format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 ;format-underline = #3EC13F
-format-foreground = ${colors.foreground}
+format-foreground = #88cef4
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
@@ -1071,10 +1071,10 @@ label-connected = %{A1:nm-connection-editor:}%essid%%{A}
 
 format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
-format-connected-foreground = ${colors.foreground}
+format-connected-foreground = #fb9fb1
 format-connected-background = ${colors.background}
 format-connected-prefix = "  "
-format-connected-prefix-foreground = ${colors.foreground}
+format-connected-prefix-foreground = #fb9fb1
 format-connected-prefix-background = ${colors.background}
 ;format-connected-underline = #7e52c6
 
@@ -1170,7 +1170,7 @@ tail = true
 click-left = ~/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh --toggle &
 
 ;format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = #88cef4
 format-prefix-background - ${colors.background}
-format-foreground = ${colors.foreground}
+format-foreground = #88cef4
 format-background = ${colors.background}
