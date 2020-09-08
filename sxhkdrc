@@ -3,7 +3,7 @@
 #################################################################
 
 #################################################################
-# SUPER + FUNCTION KEYS
+# SUPER################################################################ + FUNCTION KEYS
 #################################################################
 
 #Gimp
@@ -27,7 +27,7 @@ super + F11
     rofi -show run -fullscreen
 
 #Rofi
-super + F12
+super + space
     rofi -show run
 
 #################################################################
@@ -54,9 +54,9 @@ super + r
 super + v
     pavucontrol
 
-#Termite
+#Terminal(s)
 super + Return
-    kitty
+    alacritty
 
 #Xkill
 super + Escape
@@ -81,7 +81,7 @@ super + shift + N
 #	thunar
 
 #dmenu
-super + space
+super + F12
 	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 #reload sxhkd:
@@ -166,10 +166,6 @@ ctrl + alt + Return
 ctrl + alt + t
     termite
 
-#Vivaldi
-ctrl + alt + v
-    vivaldi-stable
-
 #Xfce4-appfinder
 ctrl + alt + a
     xfce4-appfinder
@@ -186,8 +182,8 @@ ctrl + alt + a
 #################################################################
 
 #Wallpaper trash
-alt + t
-    variety -t
+#alt + t
+#    variety -t
 
 #Wallpaper next
 alt + n
@@ -282,7 +278,7 @@ ctrl + shift + Print
 
 #xfce4-terminal dropdown
 F12
-    kitty --drop-down
+    xfce4-terminal --drop-down
 
 
 #################################################################
@@ -385,8 +381,8 @@ super + bracket{left,right}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
 # set the window state
-super + space
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+#super + space
+#	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Move focus to other monitor
 super + BackSpace
@@ -422,8 +418,8 @@ super + shift + q
 	bspc node -c
 
 #Logout
-super + shift + x
-	bspc quit
+#super + shift + x
+#	bspc quit
 
 # Focus/swap windows by direction
 super + {_,shift + }{h,j,k,l}
@@ -547,3 +543,5 @@ super + shift + {1-9,0}
 #Move window to selected desktop FOR AZERTY KEYBOARDS
 #super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
 #    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+
+#################################################################
