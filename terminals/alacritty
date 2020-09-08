@@ -215,10 +215,11 @@ font:
 #draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
+# Default colors
 colors:
   # Default colors
   primary:
-    background: '0x000000'
+    background: '0x0e1012'
     foreground: '0xc2cad4'
 
     # Bright and dim foreground colors
@@ -245,17 +246,17 @@ colors:
   selection:
     text: '0xc2cad4'
     background: '0x000000'
-
+  
   # Normal colors
   normal:
     black:   '0x171a1d'
-    red:     '0x2f343a'
-    green:   '0xe698a8'
-    yellow:  '0x444b53'
-    blue:    '0x606974'
-    magenta: '0x808d98'
-    cyan:    '0xa9b5c3'
-    white:   '0xdfe3e8'
+    red:     '0xcb9b42'
+    green:   '0xe07e90'
+    yellow:  '0xe2ad53'
+    blue:    '0x34b5a5'
+    magenta: '0xe46a83'
+    cyan:    '0xdeab4d'
+    white:   '0x659edd'
 
   # Bright colors
   bright:
@@ -266,7 +267,7 @@ colors:
     blue:    '0x6cbfb5'
     magenta: '0xe698a8'
     cyan:    '0xe1bc78'
-    white:   '0xaec5e0'
+    white:   '0xaec6e0'
 
   # Dim colors
   #
@@ -323,7 +324,7 @@ colors:
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
 # background_opacity: 1.0
-background_opacity: 0.95
+background_opacity: 0.90
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
