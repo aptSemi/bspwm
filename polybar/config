@@ -241,6 +241,7 @@ label-focused-foreground = ${colors.foreground}
 
 label-occupied = %icon%
 label-occupied-padding = 2
+label-occupied-foreground = #e1a3ee
 label-occupied-background = ${colors.background}
 
 label-urgent = %icon%
