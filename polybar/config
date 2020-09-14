@@ -120,7 +120,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = weather date
-modules-right = networkspeeddown networkspeedup memory2 cpu2 pavolume discord variety system-bluetooth-bluetoothctl arch-aur-updates wireless-network
+modules-right = filesystem networkspeeddown networkspeedup memory2 cpu2 pavolume discord variety system-bluetooth-bluetoothctl arch-aur-updates wireless-network
 
 tray-detached = false
 tray-offset-x = 0
