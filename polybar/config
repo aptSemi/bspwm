@@ -119,7 +119,7 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = weather date
+modules-center = uptime date weather
 modules-right = filesystem networkspeeddown networkspeedup memory2 cpu2 pavolume discord variety system-bluetooth-bluetoothctl arch-aur-updates wireless-network
 
 tray-detached = false
@@ -237,7 +237,7 @@ label-focused = "{   %icon%   }"
 label-focused-background = ${colors.background}
 ;label-focused-underline = #f1c581
 label-focused-padding = 2
-label-focused-foreground = #f1c581
+label-focused-foreground = ${colors.foreground}
 
 label-occupied = %icon%
 label-occupied-padding = 2
@@ -273,7 +273,7 @@ label-private-foreground = ${colors.foreground}
 ;label-separator-padding = 10
 ;label-separator-foreground = #ffb52a
 
-format-foreground = ${colors.foreground}
+format-foreground = #e1a3ee
 format-background = ${colors.background}
 
 
@@ -594,7 +594,7 @@ spacing = 4
 format-mounted = <label-mounted>
 format-mounted-foreground = ${colors.foreground}
 format-mounted-background = ${colors.background}
-format-mounted-underline = #fe0000
+;format-mounted-underline = #fe0000
 
 
 ; Available tokens:
@@ -656,7 +656,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
 format-prefix-foreground = #62FF00
-format-underline = #62FF00
+;format-underline = #62FF00
 
 ################################################################################
 
@@ -954,13 +954,13 @@ label =  %output:0:150:%
 type = custom/script
 exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
 interval = 100
-label = Uptime : %output%
+label = up : %output%
 
-format-foreground = ${colors.foreground}
+format-foreground = #e1a3ee
 format-background = ${colors.background}
-format-prefix = " "
-format-prefix-foreground = #C15D3E
-format-underline = #C15D3E
+;format-prefix = " "
+format-prefix-foreground = #e1a3ee
+;format-underline = #C15D3E
 
 ################################################################################
 
@@ -1158,7 +1158,7 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 
-format-foreground = #fdafbe
+format-foreground = #6bcac0
 format-background = ${colors.background}
 
 ###############################################################################
