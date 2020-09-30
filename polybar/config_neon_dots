@@ -39,27 +39,10 @@ format-margin =
 format-offset =
 
 [colors]
-; Nord theme ============
-;background = #2F343F
-;foreground = #f3f4f5
-;alert = #d08770
-;volume-min = #a3be8c
-;volume-med = #ebcb8b
-;volume-max = #bf616a
-; =======================
 
-; Gotham theme ==========
-; background = #0a0f14
-; foreground = #99d1ce
-; alert = #d26937
-; volume-min = #2aa889
-; volume-med = #edb443
-; volume-max = #c23127
-; =======================
-
-; INTRCPTR theme ============
+; == Semisober Neon Theme ===
 ;background = ${xrdb:color0:#222}
-background = #80000000
+background = #90000000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #f1c581
@@ -67,6 +50,7 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+
 
 ################################################################################
 ################################################################################
@@ -119,8 +103,8 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = uptime date weather
-modules-right = filesystem networkspeeddown networkspeedup memory2 cpu2 pavolume discord variety system-bluetooth-bluetoothctl arch-aur-updates wireless-network
+modules-center = weather date pub-ip
+modules-right = mpd filesystem memory2 cpu2 discord variety system-bluetooth-bluetoothctl arch-aur-updates pavolume wireless-network
 
 tray-detached = false
 tray-offset-x = 0
@@ -248,7 +232,7 @@ label-urgent = %icon%
 label-urgent-padding = 2
 
 label-empty = %icon%
-label-empty-foreground = #4f4f4f
+label-empty-foreground = ${colors.background}
 label-empty-padding = 2
 label-empty-background = ${colors.background}
 
@@ -743,14 +727,24 @@ format-background = ${colors.background}
 [module/mpd]
 ;https://github.com/jaagr/polybar/wiki/Module:-mpd
 type = internal/mpd
-;format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
-format-online =  "<label-song>  <bar-progress>"
+format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
+;format-online =  "<label-song>  <bar-progress>"
 ;format-online =  "<label-song>  <bar-progress> <icon-prev>  <icon-stop>  <toggle>  <icon-next>"
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+;format-online = "<label-song>"
+;format-online = "<icon-prev> <icon-stop> <toggle> <icon-next>"
+
+;icon-prev = 
+;icon-stop = 
+;icon-play = 
+;icon-pause = 
+;icon-next = i
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
 label-song-maxlen = 40
 label-song-ellipsis = true
 bar-progress-width = 10
@@ -760,7 +754,7 @@ bar-progress-empty = 
 bar-progress-fill-foreground = #ff0
 bar-progress-fill-background = ${colors.background}
 bar-progress-indicator-foreground = ${colors.foreground}
-format-online-foreground = ${colors.foreground}
+format-online-foreground = #88cef4
 format-online-background = ${colors.background}
 ################################################################################
 
@@ -851,11 +845,11 @@ format-background = ${colors.background}
 type = custom/script
 exec = ~/.config/polybar/scripts/pub-ip.sh
 interval = 100
-format-foreground = ${colors.foreground}
+format-foreground = #e1a3ee
 format-background = ${colors.background}
-format-underline = #FFBB00
+;format-underline = #FFBB00
 label = %output%
-format-prefix = "  "
+;format-prefix = "  "
 format-prefix-foreground = #FFBB00
 
 ################################################################################
@@ -1160,7 +1154,7 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 
-format-foreground = #6bcac0
+format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ###############################################################################
