@@ -103,8 +103,8 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = weather date pub-ip
-modules-right = mpd filesystem memory2 cpu2 discord variety system-bluetooth-bluetoothctl arch-aur-updates pavolume wireless-network
+modules-center = weather date wireless-network
+modules-right = mpd filesystem memory2 cpu2 discord variety system-bluetooth-bluetoothctl arch-aur-updates pavolume
 
 tray-detached = false
 tray-offset-x = 0
