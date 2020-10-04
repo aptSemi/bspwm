@@ -276,7 +276,7 @@ interval = 1000
 label = %output%
 format-foreground = #e1a3ee
 format-background = ${colors.background}
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = #e1a3ee
 ;format-underline = #FFBB00
 
