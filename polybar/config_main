@@ -68,7 +68,7 @@ height = 20
 radius = 0.0
 fixed-center = true
 bottom = false
-separator = :
+separator = |
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -103,8 +103,8 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = weather date wireless-network
-modules-right = mpd filesystem memory2 cpu2 discord variety system-bluetooth-bluetoothctl arch-aur-updates pavolume
+modules-center = weather date wireless-network 
+modules-right = mpd aws github discord filesystem memory2 cpu2 variety system-bluetooth-bluetoothctl arch-aur-updates pavolume
 
 tray-detached = false
 tray-offset-x = 0
@@ -288,7 +288,7 @@ interval = 1000
 label = Aur: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-foreground = #e1a3ee
 ;format-underline = #FFBB00
 
@@ -493,7 +493,7 @@ label = %date% %time%
 [module/discord]
 type = custom/script
 ;exec = echo " Discord "
-exec = echo "  "
+exec = echo "  "
 interval = 1
 tail = true
 format-foreground = #88cef4
@@ -565,7 +565,7 @@ interval = 30
 
 ; Display fixed precision values
 ; Default: false
-fixed-values = false
+fixed-values = true
 
 ; Spacing between entries
 ; Default: 2
@@ -733,17 +733,11 @@ format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>
 ;format-online = "<label-song>"
 ;format-online = "<icon-prev> <icon-stop> <toggle> <icon-next>"
 
-;icon-prev = 
-;icon-stop = 
-;icon-play = 
-;icon-pause = 
-;icon-next = 
-
-icon-prev = 
+icon-prev = 
 icon-stop = 
 icon-play = 
 icon-pause = 
-icon-next = 
+icon-next = 
 
 label-song-maxlen = 40
 label-song-ellipsis = true
@@ -870,7 +864,7 @@ format-underline = #62FF00
 [module/sep]
 ; alternative separator
 type = custom/text
-content = 
+content = |
 content-foreground = ${colors.foreground}
 content-background =  ${colors.background}
 format-foreground = ${colors.foreground}
@@ -1170,3 +1164,32 @@ format-prefix-foreground = #88cef4
 format-prefix-background - ${colors.background}
 format-foreground = #88cef4
 format-background = ${colors.background}
+
+###############################################################################
+
+[module/github]
+type = custom/script
+exec = echo "  "
+interval = 1
+tail = true
+format-foreground = #6bcac0
+format-background = ${colors.background}
+format-prefix-foreground = #738adb
+;format-underline = #738adb
+click-left = firefox https://github.com/aptSemi &
+;click-right = 
+;format-prefix = "  "
+
+###############################################################################
+
+[module/aws]
+type = custom/script 
+exec = echo "  "
+interval = 1 
+tail = true
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+;format-prefix-foreground = 
+click-left = firefox https://aws.amazon.com/console/ &
+;click-right =
+;foremat-prefix = " "
