@@ -7,24 +7,24 @@
 #################################################################
 
 #Gimp
-super + F4
-    gimp
+#super + F4
+#    gimp
 
 #Vlc
-super + F6
-    vlc --video-on-top
+#super + F6
+#    vlc --video-on-top
 
 #Virtualbox
-super + F7
-    virtualbox
+#super + F7
+#    virtualbox
 
 #Spotify
-super + F10
-    spotify
+#super + F10
+#    spotify
 
 #Rofi Fullscreen
-super + F11
-    rofi -show run -fullscreen
+#super + F11
+#    rofi -show run -fullscreen
 
 #Rofi
 super + space
@@ -39,8 +39,8 @@ super + shift + Return
    firefox
 
 #Conky-toggle
-#super + c
-#    conky-toggle
+super + shift + c
+    conky-toggle
 
 #arcolinux-logout
 super + x
@@ -64,8 +64,8 @@ super + Escape
 
 #Keyboard dependent
 #termite
-super + KP_Enter
-	termite
+#super + KP_Enter
+#	termite
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -82,7 +82,7 @@ super + shift + N
 
 #dmenu
 super + F12
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+	dmenu_run -i -nb '#191919' -nf '#6bcac0' -sb '#6bcac0' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 #reload sxhkd:
 super + shift + s
@@ -107,20 +107,20 @@ ctrl + alt + Prior
     conky-rotate -p
 
 #File-Manager
-ctrl + alt + b
-     thunar
+#ctrl + alt + b
+#     thunar
 
 #Catfish
-ctrl + alt + c
-     catfish
+#ctrl + alt + c
+#     catfish
 
 #Chromium
-ctrl + alt + g
-    chromium -no-default-browser-check
+#ctrl + alt + g
+#    chromium -no-default-browser-check
 
 #Evolution
-ctrl + alt + e
-     evolution
+#ctrl + alt + e
+#     evolution
 
 #Firefox
 ctrl + alt + f
@@ -155,12 +155,12 @@ ctrl + alt + r
   rofi-theme-selector
 
 #Spotify
-ctrl + alt + s
-   spotify
+#ctrl + alt + s
+#   spotify
 
 #Termite
-ctrl + alt + Return
-    termite
+#ctrl + alt + Return
+#    termite
 
 #termite
 ctrl + alt + t
@@ -263,7 +263,7 @@ ctrl + shift + Escape
 Print
     scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
 
-#screeenshooter
+#screenshooter
 ctrl + Print
      xfce4-screenshooter
 
@@ -335,8 +335,8 @@ XF86MonBrightnessDown
 #########################
 
 #Hide polybar
-#super + y
-#    polybar-msg cmd toggle
+super + shift + y
+    polybar-msg cmd toggle
 
 #################################################################
 #################################################################
@@ -430,20 +430,20 @@ super + {_,shift + }{h,j,k,l}
 #	bspc node @/ --flip {vertical,horizontal}
 
 # Move focused window to other monitor
-super + shift + Left
-	bspc node -m next --follow
+#super + shift + Left
+#	bspc node -m next --follow
 
 # Move focused window to other monitor
-super + shift + Right
-		bspc node -m next --follow
+#super + shift + Right
+#		bspc node -m next --follow
 
 # Move focused window to other monitor
-super + shift + Up
-	bspc node -m next --follow
+#super + shift + Up
+#	bspc node -m next --follow
 
 # Move focused window to other monitor
-super + shift + Down
-		bspc node -m next --follow
+#super + shift + Down
+#		bspc node -m next --follow
 
 #################################################################
 # SUPER + CONTROL KEYS
@@ -480,7 +480,7 @@ super + ctrl + {_,shift +}{1-9}
 
 #Focus selected desktop
 #alt + shift + Tab
-	bspc desktop -f '^{1-9,10}'
+#	bspc desktop -f '^{1-9,10}'
 
 #Rotate desktop
 #alt + space
@@ -492,7 +492,7 @@ super + ctrl + {_,shift +}{1-9}
 
 # Expand tiled space
 #alt + shift + {h,j,k,l}
-	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+#	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
 #################################################################
 # CTRL + ALT KEYS
