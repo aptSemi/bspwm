@@ -232,7 +232,7 @@ label-urgent = %icon%
 label-urgent-padding = 2
 
 label-empty = %icon%
-label-empty-foreground = ${colors.background}
+label-empty-foreground = #356560
 label-empty-padding = 2
 label-empty-background = ${colors.background}
 
