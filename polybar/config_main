@@ -1169,7 +1169,7 @@ format-background = ${colors.background}
 
 [module/github]
 type = custom/script
-exec = echo "  "
+exec = echo "  "
 interval = 1
 tail = true
 format-foreground = #6bcac0
