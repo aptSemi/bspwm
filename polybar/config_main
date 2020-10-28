@@ -38,22 +38,59 @@ format-padding =
 format-margin =
 format-offset =
 
+
 [colors]
 
-; == Semisober Neon Theme ===
-;background = ${xrdb:color0:#222}
-background = #CC000000
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
+;== THEMES!! ==
+
+;====== NORD ===========
+;background = #CC2F343F
+;foreground = #f3f4f5
+;alert = #d08770
+;volume-min = #a3be8c
+;volume-med = #ebcb8b
+;volume-max = #bf616a
+;=======================
+
+;====== GRUVBOX ========
+;background = #CC000000
+;foreground = #fe8019
+;alert = #bd2c40
+; volume-min = #
+; volume-med = #
+; volume-max = #
+
+gruvwhite = #ffffff
+gruvblack = #000000
+gruvred = #cc241d
+gruvorange = #d65d0e
+gruvgreen = #b8bb26
+gruvyellow = #d79921
+gruvblue = #83a598
+gruvpurple = #d3869b
+gruvaqua = #8ec07c
+gruvgray = #a89984
+gruvbeige = #ebdbb2
+;========================
+
+; ====== NEON ===========
 foreground = #f1c581
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
+background = #CC000000
 alert = #bd2c40
+;primary = #ffb52a
+;secondary = #e60053
+
+neonyellow = #f1c581
+neonpink = #fb9fb1
+neonlilac = #e1a3ee
+neonblue = #88cef4
+neongreen = #6bcac0
+; =======================
+
 
 
 ################################################################################
-################################################################################
+################################################################################v
 ############                  MAINBAR-BSPWM                         ############
 ################################################################################
 ################################################################################
@@ -201,15 +238,15 @@ reverse-scroll = true
 pin-workspaces = true
 
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
+ws-icon-0 = 1;www
+ws-icon-1 = 2;term
+ws-icon-2 = 3;file
+ws-icon-3 = 4;doc
+ws-icon-4 = 5;irc
+ws-icon-5 = 6;mus
+ws-icon-6 = 7;tor
+ws-icon-7 = 8;misc
+;ws-icon-8 = 9;
 ;ws-icon-9 = 10;10
 ;ws-icon-default = " "
 ;ws-icon-default = "∙"
@@ -217,7 +254,7 @@ ws-icon-8 = 9;
 
 ;format = <label-state> <label-mode>
 
-label-focused = "  %icon%  "
+label-focused = "{  %icon%  }"
 label-focused-background = ${colors.background}
 ;label-focused-underline = #f1c581
 label-focused-padding = 2
@@ -241,6 +278,7 @@ label-monocle-foreground = ${colors.foreground}
 label-tiled = "  "
 label-tiled-foreground = ${colors.foreground}
 label-fullscreen = "  "
+    white:   '0xaec6e0'
 label-fullscreen-foreground = ${colors.foreground}
 label-floating = "  "
 label-floating-foreground = ${colors.foreground}
@@ -302,7 +340,8 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix-foreground = #7D49B6
 format-prefix-underline = #7D49B6
-format-underline = #7D49B6
+format-underline = #7D49B6
+
 ################################################################################
 
 [module/backlight]
@@ -315,7 +354,7 @@ type = internal/backlight
 card = intel_backlight
 
 ; Available tags:
-;   <label> (default)
+G;   <label> (default)
 ;   <ramp>
 ;   <bar>
 format = <label>
@@ -565,7 +604,7 @@ interval = 30
 
 ; Display fixed precision values
 ; Default: false
-fixed-values = true
+fixed-values = false
 
 ; Spacing between entries
 ; Default: 2
@@ -733,11 +772,11 @@ format-online =  "<label-song>   <icon-prev>  <icon-stop>  <toggle>  <icon-next>
 ;format-online = "<label-song>"
 ;format-online = "<icon-prev> <icon-stop> <toggle> <icon-next>"
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
 label-song-maxlen = 40
 label-song-ellipsis = true
@@ -989,6 +1028,7 @@ bar-volume-foreground-4 = #40ad4b
 bar-volume-foreground-5 = #40ad4b
 bar-volume-foreground-6 = #40ad4b
 bar-volume-gradient = false
+    white:   '0xaec6e0'
 bar-volume-indicator = 
 bar-volume-indicator-font = 2
 bar-volume-fill = 
@@ -1172,9 +1212,9 @@ type = custom/script
 exec = echo "  "
 interval = 1
 tail = true
-format-foreground = #6bcac0
+format-foreground = #e1a3ee
 format-background = ${colors.background}
-format-prefix-foreground = #738adb
+format-prefix-foreground = #e1a3ee
 ;format-underline = #738adb
 click-left = firefox https://github.com/aptSemi &
 ;click-right = 
