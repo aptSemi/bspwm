@@ -44,12 +44,21 @@ format-offset =
 ;== THEMES!! ==
 
 ;====== NORD ===========
-;background = #CC2F343F
-;foreground = #f3f4f5
-;alert = #d08770
-;volume-min = #a3be8c
-;volume-med = #ebcb8b
-;volume-max = #bf616a
+background = #CC171a20
+foreground = #d8dee9
+alert = #d08770
+; volume-min = #a3be8c
+; volume-med = #ebcb8b
+; volume-max = #bf616a
+
+nordblack = #3b4252
+nordred = #bf616a
+nordgreen = #a3be8c
+nordyellow = #ebcb8b
+nordblue = #81a1c1
+nordmagenta = #b48ead
+nordcyan = #88c0d0
+nordwhite = #e5e9f0
 ;=======================
 
 ;====== GRUVBOX ========
@@ -74,9 +83,9 @@ gruvbeige = #ebdbb2
 ;========================
 
 ; ====== NEON ===========
-foreground = #f1c581
-background = #CC000000
-alert = #bd2c40
+;foreground = #f1c581
+;background = #CC000000
+;alert = #bd2c40
 ;primary = #ffb52a
 ;secondary = #e60053
 
@@ -86,8 +95,6 @@ neonlilac = #e1a3ee
 neonblue = #88cef4
 neongreen = #6bcac0
 ; =======================
-
-
 
 ################################################################################
 ################################################################################v
@@ -140,7 +147,7 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = weather date wireless-network 
+modules-center = weather date wireless-network
 modules-right = mpd aws github discord filesystem memory2 cpu2 variety system-bluetooth-bluetoothctl arch-aur-updates pavolume
 
 tray-detached = false
@@ -262,14 +269,14 @@ label-focused-foreground = ${colors.foreground}
 
 label-occupied = %icon%
 label-occupied-padding = 2
-label-occupied-foreground = #e1a3ee
+label-occupied-foreground = ${colors.nordmagenta}
 label-occupied-background = ${colors.background}
 
 label-urgent = %icon%
 label-urgent-padding = 2
 
 label-empty = %icon%
-label-empty-foreground = #356560
+label-empty-foreground = ${colors.nordblack}
 label-empty-padding = 2
 label-empty-background = ${colors.background}
 
@@ -312,10 +319,10 @@ exec = ~/.config/polybar/scripts/check-all-updates.sh
 interval = 1000
 ;label = Updates: %output%
 label = %output%
-format-foreground = #e1a3ee
+format-foreground = ${colors.nordmagenta}
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #e1a3ee
+format-prefix-foreground = ${colors.nordmagenta}
 ;format-underline = #FFBB00
 
 
@@ -483,10 +490,10 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = #fb9fb1
+format-foreground = ${colors.nordmagenta}
 format-background = ${colors.background}
 ;format-prefix = "  "
-format-prefix-foreground = #fdafbe
+format-prefix-foreground = ${colors.nordblue}
 ;format-underline = #cd1f3f
 
 label-font = 3
@@ -523,7 +530,7 @@ time-alt = %H:%M
 format-prefix = " "
 format-prefix-foreground = #c1941a
 ;format-underline = #c1941a
-format-foreground = #f1c581
+format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %date% %time%
 
@@ -535,7 +542,7 @@ type = custom/script
 exec = echo "  "
 interval = 1
 tail = true
-format-foreground = #88cef4
+format-foreground = ${colors.nordblue}
 format-background = ${colors.background}
 format-prefix-foreground = #738adb
 ;format-underline = #738adb
@@ -731,9 +738,9 @@ label = %percentage_used%%
 
 format = mem <label>
 format-prefix = " "
-format-prefix-foreground = #3384d0
+format-prefix-foreground = ${colors.nordcyan}
 ;format-underline = #3384d0
-format-foreground = #6bcac0
+format-foreground = ${colors.nordcyan}
 format-background = ${colors.background}
 
 ################################################################################
@@ -787,7 +794,7 @@ bar-progress-empty = 
 bar-progress-fill-foreground = #ff0
 bar-progress-fill-background = ${colors.background}
 bar-progress-indicator-foreground = ${colors.foreground}
-format-online-foreground = #88cef4
+format-online-foreground = ${colors.nordcyan}
 format-online-background = ${colors.background}
 ################################################################################
 
@@ -866,7 +873,7 @@ click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 ;format-underline = #3EC13F
-format-foreground = #f1c581
+format-foreground = ${colors.nordwhite}
 format-background = ${colors.background}
 
 
@@ -1000,7 +1007,7 @@ exec = echo ""
 ;exec = echo " "
 interval = 1
 tail = true
-format-foreground = #e1a3ee
+format-foreground = ${colors.nordwhite}
 format-background = ${colors.background}
 ;format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
@@ -1053,7 +1060,7 @@ format = <label>
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 ;format-underline = #3EC13F
-format-foreground = #88cef4
+format-foreground = ${colors.nordblue}
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
@@ -1101,10 +1108,10 @@ label-connected = %{A1:nm-connection-editor:}%essid%%{A}
 
 format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
-format-connected-foreground = #fb9fb1
+format-connected-foreground = ${colors.nordmagenta}
 format-connected-background = ${colors.background}
 format-connected-prefix = "  "
-format-connected-prefix-foreground = #fb9fb1
+format-connected-prefix-foreground = ${colors.nordmagenta}
 format-connected-prefix-background = ${colors.background}
 ;format-connected-underline = #7e52c6
 
@@ -1200,9 +1207,9 @@ tail = true
 click-left = ~/.config/polybar/scripts/system-bluetooth-bluetoothctl.sh --toggle &
 
 ;format-prefix = "  "
-format-prefix-foreground = #88cef4
+format-prefix-foreground = ${colors.nordblue}
 format-prefix-background - ${colors.background}
-format-foreground = #88cef4
+format-foreground = ${colors.nordblue}
 format-background = ${colors.background}
 
 ###############################################################################
@@ -1212,9 +1219,9 @@ type = custom/script
 exec = echo "  "
 interval = 1
 tail = true
-format-foreground = #e1a3ee
+format-foreground = ${colors.nordmagenta}
 format-background = ${colors.background}
-format-prefix-foreground = #e1a3ee
+format-prefix-foreground = ${colors.nordmagenta}
 ;format-underline = #738adb
 click-left = firefox https://github.com/aptSemi &
 ;click-right = 
