@@ -34,9 +34,20 @@ super + space
 # SUPER + ... KEYS
 #################################################################
 
-#Browser
+#Browser - Firefox
 super + shift + Return
    firefox
+
+#Browser - LibreWolf
+super + shift + B
+   bspc desktop --focus ^1 && librewolf
+
+#Browser - Tor
+
+
+#Music - Deadbeef
+super + shift + M
+   bspc desktop --focus ^6 && deadbeef
 
 #Conky-toggle
 super + shift + c
@@ -109,18 +120,6 @@ ctrl + alt + Prior
 #File-Manager
 #ctrl + alt + b
 #     thunar
-
-#Catfish
-#ctrl + alt + c
-#     catfish
-
-#Chromium
-#ctrl + alt + g
-#    chromium -no-default-browser-check
-
-#Evolution
-#ctrl + alt + e
-#     evolution
 
 #Firefox
 ctrl + alt + f
