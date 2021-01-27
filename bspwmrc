@@ -84,9 +84,9 @@ bspc rule -a firefox desktop='^1' follow=on
 bspc rule -a LibreWolf desktop='^1' follow=on
 bspc rule -a Alacritty desktop='^2' follow=on
 bspc rule -a Pcmanfm desktop='^3' follow=on 
-bspc rule -a libreoffice desktop='^4' follow=on
+bspc rule -a libreoffice-startcenter desktop='^4' follow=on
 bspc rule -a discord desktop='^5' follow=on
-bspc rule -a deadbeef desktop='^6' follow=on
+bspc rule -a Deadbeef desktop='^6' follow=on
 #bspc rule -a tor-browser desktop='^7' follow=on
 #bspc rule -a vlc desktop='^6'  follow=on
 #bspc rule -a mpv desktop='^6'  follow=on
