@@ -1,2 +1,3 @@
 # bspwm
-bspwm configurations.  originally made on arcolinux base
+
+old Arco BSPWM configurations.  Delete this whenever you decide to redo everything.  
