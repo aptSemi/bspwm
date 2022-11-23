@@ -1,3 +1,3 @@
 # bspwm
 
-old Arco BSPWM configurations.  Delete this whenever you decide to redo everything.  
+old Arco BSPWM configurations. To be ARCHIVED  
